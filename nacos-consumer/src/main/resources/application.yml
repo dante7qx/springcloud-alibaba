@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: nacos-consumer
+  cloud:
+    nacos:
+      discovery:
+        ip: 127.0.0.1
+        cluster-name: spirit
+        server-addr: 127.0.0.1:8848
+        metadata:
+          author: dante
+          role: msg-consumer
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+spirit:
+  provider:
+    name: nacos-provider

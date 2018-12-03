@@ -1,0 +1,31 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: nacos-provider
+  datasource:
+    platform: h2
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  cloud:
+    nacos:
+      discovery:
+        cluster-name: spirit
+        server-addr: 127.0.0.1:8848
+        metadata:
+          author: dante
+          role: msg-provider
+logging:
+  level:
+    root: info
+    org.hibernate: info
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.hibernate.type.descriptor.sql.BasicExtractor: info
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

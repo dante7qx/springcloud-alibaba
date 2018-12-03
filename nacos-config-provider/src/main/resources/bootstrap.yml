@@ -1,0 +1,19 @@
+spring: 
+  profiles:
+    active: prod
+  application:
+    name: nacos-config-provider
+  cloud: 
+    nacos: 
+      discovery:
+        cluster-name: spirit
+        server-addr: 127.0.0.1:8848
+        metadata:
+          author: dante
+          role: msg-provider
+      config: 
+        server-addr: 127.0.0.1:8848
+        namespace: 84fee135-e1f1-4913-b700-7500596414d3
+        group: SPIRIT
+        file-extension: yaml
+                

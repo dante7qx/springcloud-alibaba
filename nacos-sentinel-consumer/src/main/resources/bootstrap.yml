@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: nacos-sentinel-consumer
+  cloud:
+    nacos:
+      discovery:
+        ip: 127.0.0.1
+        cluster-name: spirit
+        server-addr: 127.0.0.1:8848
+        metadata:
+          author: dante
+          role: msg-consumer
